@@ -10,9 +10,9 @@
 
 ### components
 
-- Business related components will be direct under components folder.
+- Business-related components will be directly under the components folder.
 
-- UI only related components will be under UI folder.
+- UI-related components will be under the UI folder.
 
 ### hooks
 
@@ -34,11 +34,11 @@
 
 ### screens
 
-- Every screen imoprted in navigations.
+- Every screen imported in navigations.
 
 ### styles
 
-- Styles configs an constants.
+- Styles configs and constants.
 
 ### types
 
@@ -46,7 +46,7 @@
 
 ### utils
 
-- Functions and constsnts.
+- Functions and constants.
 
 <br />
 
@@ -56,19 +56,34 @@
 
 >**Note**: Make sure you have completed the [React Native - Environment Setup](https://reactnative.dev/docs/environment-setup) instructions.
 
-### Step 1: Start the Metro Server
+### Step 1: Install node modules and pods
 
-First, you will need to start **Metro**, the JavaScript _bundler_ that ships _with_ React Native.
+First, you will need to install node modules used by the VIwell app and install pods for ios as follows:
 
-To start Metro, run the following command from the _root_ of VIwell app:
+```bash
+// First install node modules
+yarn install
+
+// Second install pods
+npx pod-install
+// OR
+cd ios
+pod install
+```
+
+### Step 2: Start the Metro Server
+
+Second, you will need to start **Metro**, the JavaScript _bundler_ that ships _with_ React Native.
+
+To start Metro, run the following command from the _root_ of the VIwell app:
 
 ```bash
 yarn start
 ```
 
-### Step 2: Start your Application
+### Step 3: Start your Application
 
-Let Metro Bundler run in its _own_ terminal. Open a _new_ terminal from the _root_ of VIwell app. Run the following command to start your _Android_ or _iOS_ app:
+Let Metro Bundler run in its _own_ terminal. Open a _new_ terminal from the _root_ of the VIwell app. Run the following command to start your _Android_ or _iOS_ app:
 
 #### For Android
 
@@ -82,7 +97,7 @@ yarn android
 yarn ios
 ```
 
-If everything is set up _correctly_, you should see VIwell app running in your _Android Emulator_ or _iOS Simulator_ shortly provided you have set up your emulator/simulator correctly.
+If everything is set up _correctly_, you should see the VIwell app running in your _Android Emulator_ or _iOS Simulator_ shortly provided you have set up your emulator/simulator correctly.
 
 This is one way to run your app — you can also run it directly from within Android Studio and Xcode respectively.
 
@@ -92,7 +107,7 @@ This is one way to run your app — you can also run it directly from within And
 
 ## E2E Testing
 
->**Note**: Make sure you have completed reading ```.detoxrc.js``` file first and make sure that ios simulator already exists in you environment or you can replace it with another device
+>**Note**: Make sure you have completed reading ```.detoxrc.js``` file first and make sure that the ios simulator already exists in your environment or you can replace it with another device
 
 ```bash
 module.exports = {
@@ -114,7 +129,7 @@ module.exports = {
 
 First, you will need to start **Metro**, the JavaScript _bundler_ that ships _with_ React Native.
 
-To start Metro, run the following command from the _root_ of VIwell app:
+To start Metro, run the following command from the _root_ of the VIwell app:
 
 ```bash
 yarn start
@@ -134,7 +149,7 @@ yarn e2e:test-android
 yarn e2e:test-ios
 ```
 
-If everything is set up _correctly_, you should see VIwell app running in your _Android Emulator_ or _iOS Simulator_ shortly.
+If everything is set up _correctly_, you should see the VIwell app running in your _Android Emulator_ or _iOS Simulator_ shortly.
 
 ### Results
 
@@ -147,3 +162,5 @@ yarn test
 ```
 
 ### Results
+
+<img width="819" alt="Screenshot 2024-03-01 at 6 06 13 PM" src="https://github.com/MomenMahmoud7/viwell/assets/42410999/3c21938b-1655-43db-897c-afc7ae1ea668">
