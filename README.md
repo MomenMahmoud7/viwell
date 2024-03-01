@@ -1,79 +1,149 @@
-This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
+# VIwell
 
-# Getting Started
+## Structure
 
->**Note**: Make sure you have completed the [React Native - Environment Setup](https://reactnative.dev/docs/environment-setup) instructions till "Creating a new application" step, before proceeding.
+```src``` folder will be the core application source code.
 
-## Step 1: Start the Metro Server
+### assets
+
+- Static assets ```icons-fonts-...```.
+
+### components
+
+- Business related components will be direct under components folder.
+
+- UI only related components will be under UI folder.
+
+### hooks
+
+- Custom hooks.
+
+### i18n
+
+- i18n config.
+
+- Translations.
+
+### navigations
+
+- Navigations Stacks.
+
+### redux
+
+- Redux related files ```store-queries-slices```.
+
+### screens
+
+- Every screen imoprted in navigations.
+
+### styles
+
+- Styles configs an constants.
+
+### types
+
+- Global shared types.
+
+### utils
+
+- Functions and constsnts.
+
+<br />
+
+---
+
+## Run App
+
+>**Note**: Make sure you have completed the [React Native - Environment Setup](https://reactnative.dev/docs/environment-setup) instructions.
+
+### Step 1: Start the Metro Server
 
 First, you will need to start **Metro**, the JavaScript _bundler_ that ships _with_ React Native.
 
-To start Metro, run the following command from the _root_ of your React Native project:
+To start Metro, run the following command from the _root_ of VIwell app:
 
 ```bash
-# using npm
-npm start
-
-# OR using Yarn
 yarn start
 ```
 
-## Step 2: Start your Application
+### Step 2: Start your Application
 
-Let Metro Bundler run in its _own_ terminal. Open a _new_ terminal from the _root_ of your React Native project. Run the following command to start your _Android_ or _iOS_ app:
+Let Metro Bundler run in its _own_ terminal. Open a _new_ terminal from the _root_ of VIwell app. Run the following command to start your _Android_ or _iOS_ app:
 
-### For Android
+#### For Android
 
 ```bash
-# using npm
-npm run android
-
-# OR using Yarn
 yarn android
 ```
 
-### For iOS
+#### For iOS
 
 ```bash
-# using npm
-npm run ios
-
-# OR using Yarn
 yarn ios
 ```
 
-If everything is set up _correctly_, you should see your new app running in your _Android Emulator_ or _iOS Simulator_ shortly provided you have set up your emulator/simulator correctly.
+If everything is set up _correctly_, you should see VIwell app running in your _Android Emulator_ or _iOS Simulator_ shortly provided you have set up your emulator/simulator correctly.
 
 This is one way to run your app — you can also run it directly from within Android Studio and Xcode respectively.
 
-## Step 3: Modifying your App
+<br />
 
-Now that you have successfully run the app, let's modify it.
+---
 
-1. Open `App.tsx` in your text editor of choice and edit some lines.
-2. For **Android**: Press the <kbd>R</kbd> key twice or select **"Reload"** from the **Developer Menu** (<kbd>Ctrl</kbd> + <kbd>M</kbd> (on Window and Linux) or <kbd>Cmd ⌘</kbd> + <kbd>M</kbd> (on macOS)) to see your changes!
+## E2E Testing
 
-   For **iOS**: Hit <kbd>Cmd ⌘</kbd> + <kbd>R</kbd> in your iOS Simulator to reload the app and see your changes!
+>**Note**: Make sure you have completed reading ```.detoxrc.js``` file first and make sure that ios simulator already exists in you environment or you can replace it with another device
 
-## Congratulations! :tada:
+```bash
+module.exports = {
+   ...
+   devices: {
+      simulator: {
+         type: 'ios.simulator',
+         device: {
+            type: 'iPhone 15', // <= here
+         },
+      },
+      ...
+   },
+   ...
+};
+```
 
-You've successfully run and modified your React Native App. :partying_face:
+### Step 1: Start the Metro Server
 
-### Now what?
+First, you will need to start **Metro**, the JavaScript _bundler_ that ships _with_ React Native.
 
-- If you want to add this new React Native code to an existing application, check out the [Integration guide](https://reactnative.dev/docs/integration-with-existing-apps).
-- If you're curious to learn more about React Native, check out the [Introduction to React Native](https://reactnative.dev/docs/getting-started).
+To start Metro, run the following command from the _root_ of VIwell app:
 
-# Troubleshooting
+```bash
+yarn start
+```
 
-If you can't get this to work, see the [Troubleshooting](https://reactnative.dev/docs/troubleshooting) page.
+### Step 2: Run tests
 
-# Learn More
+#### For Android
 
-To learn more about React Native, take a look at the following resources:
+```bash
+yarn e2e:test-android
+```
 
-- [React Native Website](https://reactnative.dev) - learn more about React Native.
-- [Getting Started](https://reactnative.dev/docs/environment-setup) - an **overview** of React Native and how setup your environment.
-- [Learn the Basics](https://reactnative.dev/docs/getting-started) - a **guided tour** of the React Native **basics**.
-- [Blog](https://reactnative.dev/blog) - read the latest official React Native **Blog** posts.
-- [`@facebook/react-native`](https://github.com/facebook/react-native) - the Open Source; GitHub **repository** for React Native.
+#### For iOS
+
+```bash
+yarn e2e:test-ios
+```
+
+If everything is set up _correctly_, you should see VIwell app running in your _Android Emulator_ or _iOS Simulator_ shortly.
+
+### Results
+
+## Unit Testing
+
+### Run tests
+
+```bash
+yarn test
+```
+
+### Results
