@@ -61,11 +61,13 @@
 First, you will need to install node modules used by the VIwell app and install pods for ios as follows:
 
 ```bash
+
 // First install node modules
 yarn install
 
 // Second install pods
 npx pod-install
+
 // OR
 cd ios
 pod install
@@ -152,6 +154,26 @@ yarn e2e:test-ios
 If everything is set up _correctly_, you should see the VIwell app running in your _Android Emulator_ or _iOS Simulator_ shortly.
 
 ### Results
+
+#### Android
+
+<img width="983" alt="Screenshot 2024-03-01 at 6 47 04 PM" src="https://github.com/MomenMahmoud7/viwell/assets/42410999/79457b74-905d-46ca-ba03-230de42d76ed">
+
+<br />
+
+https://github.com/MomenMahmoud7/viwell/assets/42410999/13414f47-1516-47d5-8455-e6c1d40cb206
+
+---
+
+#### iOS
+
+<img width="983" alt="Screenshot 2024-03-01 at 6 39 05 PM" src="https://github.com/MomenMahmoud7/viwell/assets/42410999/8b14521e-73a4-4f9a-9a9a-4e9a6b5a691d">
+
+<br />
+
+https://github.com/MomenMahmoud7/viwell/assets/42410999/86948e24-da22-42c1-b520-ee08e269c9fd
+
+---
 
 ## Unit Testing
 
